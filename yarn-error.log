@@ -1,0 +1,56 @@
+Arguments: 
+  /Users/davidmcarthur/.nvm/versions/node/v12.14.1/bin/node /usr/local/Cellar/yarn/1.21.1/libexec/bin/yarn.js
+
+PATH: 
+  /usr/local/opt/libpq/bin:/Users/davidmcarthur/.nvm/versions/node/v12.14.1/bin:/Users/davidmcarthur/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin
+
+Yarn version: 
+  1.21.1
+
+Node version: 
+  12.14.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/pg-error-snippet: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:66947:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:140665:22)
+      at Request.emit (events.js:223:5)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:141637:10)
+      at Request.emit (events.js:223:5)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:141559:12)
+      at Object.onceWrapper (events.js:312:28)
+      at IncomingMessage.emit (events.js:228:7)
+      at endReadableNT (_stream_readable.js:1185:12)
+      at processTicksAndRejections (internal/process/task_queues.js:81:21)
+
+npm manifest: 
+  {
+    "name": "sql-modules",
+    "version": "0.0.1",
+    "author": "Dave Star <daviestar@gmail.com>",
+    "license": "MIT",
+    "main": "src/index.js",
+    "scripts": {
+      "start": "node index.js",
+      "db": "/bin/bash db.sh",
+      "test": "ava --verbose"
+    },
+    "dependencies": {
+      "chalk": "^3.0.0",
+      "pg-error-snippet": "0.0.1",
+      "topo-files": "0.0.1"
+    },
+    "devDependencies": {
+      "ava": "^2.4.0",
+      "pg": "^7.14.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
