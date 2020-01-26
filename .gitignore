@@ -2,3 +2,4 @@ node_modules/
 sql/
 _sql/
 output.sql
+yarn-error.log
