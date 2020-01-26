@@ -21,6 +21,8 @@ function startDocker() {
       --env POSTGRES_PASSWORD=$PASSWORD \
       --env POSTGRES_DB=$DATABASE \
       postgres:12
+
+    sleep 5
   fi
 }
 
