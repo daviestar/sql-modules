@@ -15,6 +15,8 @@ test("formats postgres error", async t => {
     await pool.query(query);
   } catch (err) {
     const output = postgresErrorOutput(err, query, files);
+    console.log(err);
+    console.log(output);
     t.snapshot(output);
   }
 });
