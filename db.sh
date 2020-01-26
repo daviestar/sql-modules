@@ -5,7 +5,7 @@ DATABASE='sql_modules'
 USER='postgres'
 PASSWORD='postgres'
 HOST='localhost'
-PORT=5435
+PORT=5432
 
 function startDocker() {
   if [ $(docker ps -q -a -f name=$CONTAINER_NAME) ]; then
@@ -20,7 +20,7 @@ function startDocker() {
       --env POSTGRES_USER=$USER \
       --env POSTGRES_PASSWORD=$PASSWORD \
       --env POSTGRES_DB=$DATABASE \
-      postgres
+      postgres:12
   fi
 }
 
@@ -35,14 +35,7 @@ function destroyDocker() {
 }
 
 function usage() {
-  echo "Usage: docker <command>"
-  echo "Available commands:"
-  echo "start"
-  echo "stop"
-  echo "destroy"
-  echo "create-user"
-  echo "reset"
-  echo "pqsl"
+  echo "Usage: docker <start|stop|destroy>"
   exit 1
 }
 
