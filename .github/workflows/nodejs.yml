@@ -8,6 +8,15 @@ jobs:
     strategy:
       matrix:
         node-version: [12.x]
+    services:
+      postgres:
+        image: postgres
+        ports:
+          - 5432/tcp
+        env:
+          POSTGRES_USER: admin
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: sql_modules
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js ${{ matrix.node-version }}
@@ -15,7 +24,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn
-      - run: yarn db start
       - run: FORCE_COLOR=1 yarn test
         env:
           CI: true
