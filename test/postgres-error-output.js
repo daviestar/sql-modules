@@ -5,7 +5,7 @@ const { sqlModules } = require("../src");
 const { postgresErrorOutput } = require("../src/sql-modules");
 
 const pool = new Pool({
-  connectionString: "postgres://postgres:postgres@localhost:5432/sql_modules"
+  connectionString: "postgres://postgres:postgres@localhost:5435/sql_modules"
 });
 
 test("formats postgres error", async t => {

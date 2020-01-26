@@ -5,7 +5,7 @@ DATABASE='sql_modules'
 USER='postgres'
 PASSWORD='postgres'
 HOST='localhost'
-PORT=5432
+PORT=5435
 
 function startDocker() {
   if [ $(docker ps -q -a -f name=$CONTAINER_NAME) ]; then
