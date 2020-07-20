@@ -1,9 +1,12 @@
 {
   "name": "sql-modules",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Dave Star <daviestar@gmail.com>",
   "license": "MIT",
   "main": "src/index.js",
+  "bin": {
+    "sql-modules": "bin/cli.js"
+  },
   "scripts": {
     "start": "node index.js",
     "db": "/bin/bash db.sh",
@@ -11,6 +14,7 @@
   },
   "dependencies": {
     "chalk": "^3.0.0",
+    "minimist": "^1.2.5",
     "pg-error-snippet": "0.0.1",
     "topo-files": "0.0.1"
   },
