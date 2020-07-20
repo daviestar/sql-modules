@@ -21,8 +21,7 @@ async function writeFileToDisk(filePath, output) {
   try {
     await writeFile(filePath, output)
   } catch (err) {
-    err.message = `[topo-files]: Error writing to file "${filePath}" ${err.message}`
-    throw err
+    console.error(`[topo-files]: Error writing to file "${filePath}" ${err.message}`)
   }
 }
 
