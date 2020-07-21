@@ -10,13 +10,11 @@ const writeFile = promisify(fs.writeFile)
 async function run(directory, options) {
   try {
     const { files } = await sqlModules(directory, options)
-    // console.log(files)
     const output = joinFiles(files)
-    console.log(output)
     if (options.outFile) {
       await writeFileToDisk(options.outFile, output)
     } else {
-      process.stdout.write(output)
+      console.log(output)
     }
     process.exit(0)
   } catch (err) {
