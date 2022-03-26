@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "chalk": "^3.0.0",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "pg-error-snippet": "0.0.1",
     "topo-files": "0.0.1"
   },
